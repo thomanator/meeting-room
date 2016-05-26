@@ -1,0 +1,118 @@
+{"Response":
+	{
+  "status": "success",
+  "message": "",
+  "data": [
+    {
+      "_id": "573e17f1725f973410127bae",
+      "name": "Entrepreneurship",
+      "capacity": "10-15",
+			"items":[ 1, 2
+
+
+			],
+      "occupied": false,
+      "bookings": []
+    },
+    {
+      "_id": "573e17f1725f973410127baf",
+      "name": "Creativity",
+      "capacity": "6-8",
+			"items":[ 1, 2
+
+
+			],
+      "occupied": false,
+      "bookings": [
+        {
+          "_id": "5743328b82227ac40fd1f61b",
+          "user": "vikramthomas93@gmail.com",
+          "name": "Vikram Thomas",
+          "roomName": "Creativity",
+          "date": {
+            "startTime": "2016-05-24T10:00:00.000Z",
+            "endTime": "2016-05-24T11:00:00.000Z"
+          }
+        },
+        {
+          "_id": "574333d73e000018110e520b",
+          "user": "vikramthomas93@gmail.com",
+          "name": "Vikram Thomas",
+          "roomName": "Creativity",
+          "date": {
+            "startTime": "2016-05-23T22:00:00.000Z",
+            "endTime": "2016-05-23T23:00:00.000Z"
+          }
+        },
+        {
+          "_id": "5743343e3e000018110e520c",
+          "user": "vikramthomas93@gmail.com",
+          "name": "Vikram Thomas",
+          "roomName": "Creativity",
+          "date": {
+            "startTime": "2016-05-24T11:00:00.000Z",
+            "endTime": "2016-05-24T12:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "573e17f1725f973410127bb0",
+      "name": "Agility",
+      "capacity": "6-8",
+			"items":[ 1, 2
+
+
+			],
+
+      "occupied": false,
+      "bookings": []
+    },
+    {
+      "_id": "573e17f1725f973410127bb1",
+      "name": "Inclusive",
+      "capacity": "10-12",
+			"items":[ 1, 2
+
+
+			],
+      "occupied": false,
+      "bookings": []
+    },
+    {
+      "_id": "573e17f1725f973410127bb2",
+      "name": "Culture",
+      "capacity": "2-4",
+			"items":[ 1, 2
+
+
+			],
+      "occupied": false,
+      "bookings": []
+    },
+    {
+      "_id": "573e17f1725f973410127bb3",
+      "name": "Intgrity",
+      "capacity": "4-6",
+			"items":[ 1, 2
+
+
+			],
+
+      "occupied": false,
+      "bookings": []
+    },
+    {
+      "_id": "573e17f1725f973410127bb4",
+      "name": "Joy",
+      "capacity": "8-10",
+			"items":[ 1, 2
+
+
+			],
+      "occupied": false,
+      "bookings": []
+    }
+  ]
+}
+}
