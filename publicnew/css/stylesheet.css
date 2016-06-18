@@ -1,0 +1,101 @@
+
+body {
+	background-color: #F9F9F9;
+	font-family: 'Roboto';
+	margin: 0px;
+}
+
+.image {
+	position: absolute;
+	height : 250px;
+	width: 100%;
+	color:white;
+	font-size: 150%;
+	margin-top:0;
+
+}
+
+#cards {
+	position:absolute;
+	margin-top: 270px;
+	height:100%;
+	margin-left:15%;
+	width:70%;
+}
+
+
+
+div img {
+	position: absolute;
+	height : 250px;
+	width: 100%;	
+}
+
+h1 {
+	position : absolute;
+	margin-top : 20px;
+	margin-left: 15%;
+	color: white;
+}
+
+#projector {
+	position: absolute;
+	margin-left: 15%;
+	margin-top: 180px;
+	width:17.5%;
+}
+
+#tv {
+	position: absolute;
+	margin-left: 32.5%;
+	margin-top: 180px;
+	width:17.5%;
+}
+
+#phone {
+	position: absolute;
+	margin-left: 50%;
+	margin-top: 180px;
+	width:17.5%;
+}
+
+#chrome {
+	position: absolute;
+	margin-left: 67.5%;
+	margin-top: 180px;
+	width:17.5%;
+}
+
+#myClass {
+	display:inline-block;
+	margin-left: 20px; 
+	margin-top: 20px;
+	width:200px;
+	height:200px;
+	background-color: #FFFFFF;
+	box-shadow: 2px 2px 2px 2px #888888;
+	
+}
+
+#roomName {
+	margin-left: 5px;
+	font-size: 120%;
+}
+
+#capacity {
+	margin-left: 5px;	
+}
+
+#book {
+	margin-left: 5px;
+	margin-top: 60px;
+	color: #5760A4;
+}
+
+#myclass {
+	display:none;
+	height:80px;
+	width:300px;
+	background-color:#FF0000
+}
+

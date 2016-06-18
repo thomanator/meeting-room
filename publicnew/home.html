@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Meeting-Room</title>
+		
+		
+		<script src= 'https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js'></script>		
+		<script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js'></script>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel='stylesheet' href='/css/stylesheet.css'>	
+
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.3/ui-bootstrap.js"></script>	
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.3/ui-bootstrap-tpls.js"></script>		
+		<script src= '/js/app.js'></script>		
+	</head>
+
+
+	<body ng-app = 'meeting-room'>
+		<div class='image'>
+			<img src='fback.png'></img>
+			<h1> Filter </h1>
+			<div id = 'projector'><input type = 'checkbox'>Projector</input></div>
+			<div id = 'tv'><input type = 'checkbox'>Tv Screen</input></div>
+			<div id = 'phone'><input type = 'checkbox'>Speaker Phone</input></div>
+			<div id = 'chrome'><input type = 'checkbox'>Chrome Cast</input></div>
+		</div>	
+
+		<div class="btn-group" ng-controller = 'dropdown' uib-dropdown is-open="status.isopen">
+      <button id="single-button" type="button" class="btn btn-primary" uib-dropdown-toggle ng-disabled="disabled">
+        Bookings <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+        <li ng-repeat = 'booking in bookings'>
+        	<p>{{booking.roomName}} {{booking.date.startTime}} {{booking.date.endTime}}</p>
+        	<button class='btn btn-primary' ng-click='cancel(booking)'>Cancel</button>        	
+        <li>
+      </ul>
+    </div>
+    <button style='position:absolute;margin-left:50%;margin-top:20px;z-index:20'>Voila</button>
+    <div ng-repeat = 'booking in bookings' class = 'myclass'>
+    	<p style = 'margin-left:10px;margin-top:20px;font-family:Roboto;font-size:120%;position:absolute'>{{booking.roomName}}</p>
+    	<p style = 'margin-left:10px;margin-top:40px;font-family:Roboto;font-size:80%;position:absolute'>{{booking.date.startTime}} - {{booking.date.endTime}}</p>    	    	
+    </div>
+
+		<div ng-controller = 'mainController' id = 'cards'>		
+			<div id = 'myClass' ng-repeat='room in rooms'>
+				<p id = 'roomName'>{{room.name}}</p>
+				<p id = 'capacity'>{{room.capacity}}</p>				
+				<p id = 'book' ng-click="open(room)"><strong>BOOK</strong></p>
+			</div>
+		</div>
+		<div >
+		</div>
+
+
+		 <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">Im a modal!</h3>
+        </div>
+
+        <div class = 'modal-body'>
+        	<div>
+        		 <uib-timepicker ng-model="startTime" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian" show-seconds='seconds'></uib-timepicker>
+        	</div>
+        	<div>
+        		 <uib-timepicker ng-model="endTime" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian" show-seconds='seconds'></uib-timepicker>
+        	</div>
+        	<div>
+        		<select ng-init='options[0]' ng-model='day' ng-options = 'option.name for option in options'></select>
+        	</div>
+        </div>	
+
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+    <script>	
+				function cray() {
+					console.log('coming here')
+					var elem = document.getElementsByClassName('myclass')
+					for(var i =0;i<elem.length;i++) {
+						if(elem[i].style.display=='none') {
+							elem[i].style.display='block'
+							
+						}
+						else {
+							elem[i].style.display='none'						
+
+						}
+					}
+				}
+			</script>
+	</body>	
+</html>

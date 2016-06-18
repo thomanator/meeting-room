@@ -32,8 +32,7 @@ exports.authenticateUser = function(accessToken,res,cb) {
 	userModel.findOne({accessToken:accessToken},function(err,user) {
 		if(err) {
 			return cb(err)
-		}
-		console.log('The user is',user)
+		}		
 		if(!user) {
 			res.sendStatus(403)
 		}

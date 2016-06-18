@@ -8,7 +8,7 @@ module.exports = function(app) {
 	app.get('/dashboard',room.dashboard)
 	app.get('/list',booking.list)
 	app.get('/home',function(req,res) {
-		res.sendFile(config.dir+'\\public\\home.html')
+		res.sendFile(config.dir+'\\publicnew\\home.html')
 	})
 
 	app.post('/login',user.login)	
